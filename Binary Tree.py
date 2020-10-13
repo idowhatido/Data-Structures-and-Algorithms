@@ -14,9 +14,14 @@ class binaryTree:
     else:
       self.left = binaryTree(data)
 
-root = binaryTree(12)
-root.addChild(13)
-root.addChild(14)
-root.addChild(16)
-root.addChild(17)
-print(root.left.right.data)
+def buildTree(arr):
+    root = binaryTree(arr[0])
+
+    for i in range(1,len(arr)):
+        root.addChild(arr[i])
+    return(root)
+
+if __name__ == '__main__':
+    arr = [9,5,3,2,5,32,76,23,654,32]
+    tree = buildTree(arr)
+    print(tree.right.data)
