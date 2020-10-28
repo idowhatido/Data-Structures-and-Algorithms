@@ -15,6 +15,7 @@ class LinkedList:
       itr = itr.next
     print(string)
 
+
 if __name__ == '__main__':
     LinkedList1 = LinkedList()
     Node1 = Node(15)
